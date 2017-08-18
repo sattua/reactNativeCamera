@@ -1,0 +1,5 @@
+dependencies: \
+  /Users/anamarimorales/react-native/camera/node_modules/react-native/React/Profiler/RCTFPSGraph.m \
+  /Users/anamarimorales/react-native/camera/node_modules/react-native/React/Profiler/RCTFPSGraph.h \
+  /Users/anamarimorales/react-native/camera/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/anamarimorales/react-native/camera/node_modules/react-native/React/Base/RCTAssert.h
