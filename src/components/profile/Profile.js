@@ -24,8 +24,9 @@ export default class Profile extends React.Component{
         let global = this;
         AsyncStorage.getItem("myCamAppData")
         .then((value) => {
-            debugger;
-            global.props.screenProps.album = JSON.parse(value);
+            if(value){
+                global.props.screenProps.album = JSON.parse(value);
+            }
         }).done();
     }
 
