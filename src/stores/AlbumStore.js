@@ -8,7 +8,8 @@ class AlbumStore {
  
     @computed get unfinishedTodoCount() {
         return this.album.filter(album => !album.finished).length;
-    } 
+    }
+    
 }
  
 const Album = new AlbumStore();

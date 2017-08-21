@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Text, Image, TextInput, StyleSheet, Alert } from 'react-native';
+import { View, Text, Image, TextInput, StyleSheet, Alert, AsyncStorage } from 'react-native';
 import { Card, ListItem, Button } from 'react-native-elements';
-import { StackNavigator } from 'react-navigation';
 import MyCamera from '../camera/MyCamera';
 import {observer} from 'mobx-react';
 
@@ -20,6 +19,15 @@ export default class Profile extends React.Component{
        title: 'Welcome',
        headerBackTitle: null
     };
+
+    componentDidMount(){
+        let global = this;
+        AsyncStorage.getItem("myCamAppData")
+        .then((value) => {
+            debugger;
+            global.props.screenProps.album = JSON.parse(value);
+        }).done();
+    }
 
     render(){
         const { navigate } = this.props.navigation;
@@ -77,28 +85,36 @@ export default class Profile extends React.Component{
         }
     }
 
+    doCreate(){
+
+        this.props.screenProps.album.push({
+            name: this.state.name,
+            avatar_url: this.props.screenProps.cameraFileSrc,
+            subtitle: this.state.description
+        });
+
+        AsyncStorage.setItem('myCamAppData', JSON.stringify(this.props.screenProps.album));
+
+        this.props.screenProps.cameraFileSrc = "https://facebook.github.io/react/img/logo_og.png";
+
+        this.setState({
+            name: "",
+            description: "",
+        });
+    }
+
     createProfile(){
         if(this.state.name && this.state.description){
-            this.props.screenProps.album.push({
-                name: this.state.name,
-                avatar_url: this.props.screenProps.cameraFileSrc,
-                subtitle: this.state.description
-            });
-            this.props.screenProps.cameraFileSrc = "https://facebook.github.io/react/img/logo_og.png";
-            this.setState({
-                name: "",
-                description: "",
-            });
+            try {
+                this.doCreate();
+            } catch (error) {
+                Alert.alert("Error on saving...");
+            }
         }else{
             Alert.alert("Please add a name and description");
         }
     }
 }
-const StackNav = StackNavigator({
-  MyCamera: { 
-    screen: MyCamera, 
-  },
-});
 
 const styles = StyleSheet.create({
     profileContainer:{

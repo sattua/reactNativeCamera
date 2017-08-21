@@ -9,13 +9,7 @@ export default class App extends React.Component {
 
   constructor(props){
     super(props);
-    this.state = {myKey: ''};
-  }
-
-  componentDidMount(){
-    AsyncStorage.getItem("myKey").then((value) => {
-        this.setState({myKey: value});
-    }).done();
+    this.state = {storaged: ''};
   }
 
   render() {

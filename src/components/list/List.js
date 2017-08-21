@@ -7,7 +7,7 @@ import {observer} from 'mobx-react';
 export default class MyList extends React.Component{
  render() {
     const { screenProps } = this.props;
-   // debugger;
+    debugger;
     return (
       <ScrollView>
         <List containerStyle={{marginBottom: 20}}>
