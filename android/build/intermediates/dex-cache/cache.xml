@@ -3,237 +3,237 @@
 
     <item
         is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_12b7f6046de8aa41d306e8073b93c35d223d709c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_90a11474f11773e8293fb578915b5da451850f14.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_696979623df0a94b1d25d9a91cbc1aa74278d66f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_0a3609379763d6c1722aefb4ee3c16a629bfe5da.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_6e5e455554b7561c1be19fe58961098e57ba84a7.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_e24aa3d70d2802ee946ea17f1950949b5fc4111e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_cc5aadb6a8d74c9a9bba70ce2ae35d4d3c706635.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/CameraApp/react-native-camera/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a9161da891dd3c9ae10d21b1a1f9f1b0ff683cfe">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/CameraApp-react-native-camera-unspecified_85abf06bfe4c89a41abf939a8cf1792776dedeea.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_c131a91a448d27ec73c487eb3e920a61727cbe75.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_f3bf22af6c6e34f5c6eef0ddc5d46e83fd8124ed.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_b5b59635edec7a7996d575e825ac1ba985e832c0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_654b6c0cbcc6996e391ec3b35f9ed2763dd8ddfc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_719f4bc7d8fcea987df36e5521350171d8584f02.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_9901bc8f0da44d7f61ed5dec00136b1e8730441a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.46.4/jars/classes.jar"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.46.4/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="c5526d30278eb171f4a1325bd6b927c9057c91f4">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.46.4_ce32fc3fd503d46202578c85df1de37ae4d1a886.jar" />
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.46.4_44713a684ff3c43f10184f46fc327554e01f7cc5.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_6723323a5b7d427f8d28cf9ff04aaa39cc9474e1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_7696662e15a03cfa8273a0c47de05474fc7139e4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_eaee7298796e5cecdc2a4841aec2efe4a51ecff3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_edc892f2b0570e2ea54fe6d039a3339d3f3bee57.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/CameraApp/react-native-vector-icons/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/CameraApp-react-native-vector-icons-unspecified_1fbcd960235b702974a06557ef6a54a95d22b169.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_f8b80d9c33115e38f532a2ea20528b66c83886ed.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_ecd160c9fda976e4dac1201afaa9ef1c93d5c870.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="55615fa2582424e38705487d1d3969af8554f637">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_f641474b45f5356a5799d783f0257061a63e9571.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.46.4/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_2846eeddb4b4c6e390fc47819dac3aca002a2aee.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/Users/anamarimorales/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/com.drewnoakes/metadata-extractor/2.9.1/53fdf22be10c9d426ec63431c7342895bc642261/metadata-extractor-2.9.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="53fdf22be10c9d426ec63431c7342895bc642261">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_7385f941b20e7826597b3707d8a23f8ac5bb7db9.jar" />
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/metadata-extractor-2.9.1_fa3ba664f51cd4ea9313efcd23d587c35082bc40.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_03e5087e9688b1c4168e1deb09c0e1b979853e7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/CameraApp/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/CameraApp-react-native-vector-icons-unspecified_4e46e8e001a84e36029abec156c66941852d686d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="050f688115ea65a0292d8483a6ffe6bcdab1e2ef">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.0.1_ef2a380c928a12e17be398ea97bbaa6574bb93e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/Users/anamarimorales/react-native/camera/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_5de5c4c53af952149a2c9ecb074c8d5bca4c58c1.jar" />
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_e06f1ff034422755426c3d71fbae76a445d46701.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_16e7613cbc7cc09c6411ce9c39ea37afbbf17bf5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="ba9b39366b723ccff6359d1117332968e98a4aca">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.0.1_2f9884ce917d0eecac32df4f405b8a7db3339852.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_6fe5870628d3512e385e1aeff5e320e115fab127.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_d1fbd0311cbcd89fd43a46507b28ecb2be982ddc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.1/2287494d4f5f9f3a9a2bb6980e3f32053721b315/core-3.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2287494d4f5f9f3a9a2bb6980e3f32053721b315">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/core-3.2.1_3d1263d6eae7e3ee0f283097bb1526a4817c81de.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="2668e49e4e31c7d451b76a36009b902bf44e0d70">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.0.1_6a8a540e8c5a30771a43e5c265b7b0758b2fb8a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_f68facc8fbb68d25e55b2b7d768ad301ae5cf00a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_73e0998d2b8a3baddbceb68fff99483d0de156c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_00b405887751e73330fd6fd4a8472773f2d57400.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/com.adobe.xmp/xmpcore/5.1.2/55615fa2582424e38705487d1d3969af8554f637/xmpcore-5.1.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="55615fa2582424e38705487d1d3969af8554f637">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/xmpcore-5.1.2_68d398d736930540a282fc7e82e67302dbd33e7a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_bd9378663f55a9acb5753c1f0304c833334eb3cc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_c2abbe36d7c691cf94f460614b0d700665c35d43.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_ada163ba25b40cd295d4ae2657ac8f3193b29c16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_47c9bd5a1103c4d5d0cb969fe851592a734b5f8a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5a61f17cd72e20aa4323cbf5f909b7c609619275">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.0.1_bff2464778667d41796c9d10e1f03ccb329e1870.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/CameraApp/react-native-camera/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9161da891dd3c9ae10d21b1a1f9f1b0ff683cfe">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/CameraApp-react-native-camera-unspecified_4663ebdb4c153f9e9a84854e55ccbed666ff3472.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d9c4402c3057225d80cbbbec52154e7a25b0ebdf">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.0.1_1ac400f213717eb3b75d449a5b3a66d08a88b7f8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.46.4/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_b4105030a80b5194bc3eb359e4a9f76ede375dc2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_d772616b11941166afb5c7bc039923312d5280db.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="cf836a435a496eb22ff2aa69aa1e619462549f81">
+        <dex dex="/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.0.1_e03e4fafeab029078a6b234ebe175707281575b6.jar" />
     </item>
 
 </items>

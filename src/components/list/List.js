@@ -1,7 +1,9 @@
 import React from 'react';
 import { Text, StyleSheet, Image, View, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
+import {observer} from 'mobx-react';
 
+@observer
 export default class MyList extends React.Component{
  render() {
     const { screenProps } = this.props;

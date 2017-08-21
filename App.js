@@ -2,7 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, AsyncStorage,TextInput } from 'react-native';
 import Album from './src/stores/AlbumStore';
 import TabNav from './src/routers/Router';
+import {observer} from 'mobx-react';
 
+@observer
 export default class App extends React.Component {
 
   constructor(props){
@@ -19,12 +21,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TabNav  screenProps= {Album} />
-         {/*  <MyList style={styles.mylistContainer} albumData= {Album} />
-{/*         <TextInput value={this.state.myKey} placeholder="Type here!" onChangeText={(value) =>{
-          AsyncStorage.setItem("myKey", value);
-          this.setState({myKey: value});
-          }} /> */} 
+        <TabNav screenProps= {Album} />
       </View>
     );
   }

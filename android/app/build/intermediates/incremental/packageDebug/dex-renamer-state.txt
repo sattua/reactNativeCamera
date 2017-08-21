@@ -1,4 +1,4 @@
-#Thu Aug 17 15:32:50 CST 2017
-base.0=/Users/anamarimorales/react-native/camera/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Mon Aug 21 14:41:50 CST 2017
+base.0=/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.0=/Users/anamarimorales/react-native/camera/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=/Users/juan/devProjects/reactNativeCamera/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

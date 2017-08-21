@@ -10,7 +10,9 @@ import {
 } from 'react-native';
 import Camera from 'react-native-camera';
 import { Button } from 'react-native-elements';
- 
+import {observer} from 'mobx-react';
+
+@observer
 export default class MyCamera extends React.Component {
 
   static navigationOptions = {
@@ -34,10 +36,10 @@ export default class MyCamera extends React.Component {
  
   takePicture() {
     const options = {};
-    //options.location = ...
     this.camera.capture({metadata: options})
       .then((data) => {
-        debugger;
+        this.props.myStore.cameraFileSrc = data.path;
+        this.props.toggleFunction();
         return console.log(data);
       })
       .catch(err => console.error(err));

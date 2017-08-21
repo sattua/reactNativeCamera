@@ -1,49 +1,51 @@
 import React from 'react';
-import { View, Text, Image, TextInput, StyleSheet } from 'react-native';
+import { View, Text, Image, TextInput, StyleSheet, Alert } from 'react-native';
 import { Card, ListItem, Button } from 'react-native-elements';
 import { StackNavigator } from 'react-navigation';
 import MyCamera from '../camera/MyCamera';
+import {observer} from 'mobx-react';
 
-const users = [
- {
-    name: 'brynn',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/brynn/128.jpg'
- },
-]
-
+@observer
 export default class Profile extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             camaraOn: false,
+            name: "",
+            description: "",
         }
     }
+
     static navigationOptions = {
        title: 'Welcome',
        headerBackTitle: null
     };
+
     render(){
         const { navigate } = this.props.navigation;
         let content = null;
         if (this.state.camaraOn){
-            content = <MyCamera/>;
+            content = <MyCamera myStore={this.props.screenProps} toggleFunction= {this.getCamera.bind(this)} />;
         }
         else{
             content = (                
-                    <Card title='Photo info!'>
+                    <Card title='Photo info!' image ={{uri:this.props.screenProps.cameraFileSrc}} >
                     <TextInput
                         placeholder="Name"
                         placeholderTextColor="black"
                         style={styles.input}
+                        onChangeText={(name) => this.setState({name})}
+                        value={this.state.name}
                     />
                     <TextInput
                         placeholder="Description"
                         placeholderTextColor="black"
                         style={styles.input}
+                        onChangeText={(description) => this.setState({description})}
+                        value={this.state.description}
                     />
                     </Card>
-        );  
-        }
+        );}
         return (
             <View style={styles.profileContainer}>
                 {content}
@@ -76,8 +78,20 @@ export default class Profile extends React.Component{
     }
 
     createProfile(){
-        debugger;
-
+        if(this.state.name && this.state.description){
+            this.props.screenProps.album.push({
+                name: this.state.name,
+                avatar_url: this.props.screenProps.cameraFileSrc,
+                subtitle: this.state.description
+            });
+            this.props.screenProps.cameraFileSrc = "https://facebook.github.io/react/img/logo_og.png";
+            this.setState({
+                name: "",
+                description: "",
+            });
+        }else{
+            Alert.alert("Please add a name and description");
+        }
     }
 }
 const StackNav = StackNavigator({
