@@ -2,24 +2,34 @@ import React from 'react';
 import { Text, StyleSheet, Image, View, ScrollView } from 'react-native';
 import { List, ListItem } from 'react-native-elements'
 import {observer} from 'mobx-react';
+import { StackNavigator } from 'react-navigation';
+import ProfileCard from '../card/ProfileCard'
 
 @observer
 export default class MyList extends React.Component{
- render() {
+
+showProfile(profile){
+  this.props.screenProps.selectedProfile = profile;
+  this.props.navigation.navigate( "ProfileCard", { 'store': this.props.screenProps } );
+  
+}
+
+render() {
     const { screenProps } = this.props;
-    debugger;
+
     return (
       <ScrollView>
         <List containerStyle={{marginBottom: 20}}>
-        {
-            screenProps.album.map((l, i) => (
+        { screenProps.profiles.length ?
+            screenProps.profiles.map((profile, i) => (
                 <ListItem
                     roundAvatar
-                    avatar={{uri:l.avatar_url}}
+                    avatar={{uri:profile.avatar_url}}
                     key={i}
-                    title={l.name}
+                    title={profile.name}
+                    onPress={ this.showProfile.bind(this, profile) }
                 />
-            ))
+            )) : undefined
         }
         </List>
       </ScrollView>
@@ -31,6 +41,5 @@ const styles = StyleSheet.create({
   imageContainer:{
       justifyContent: 'flex-start',
       flexDirection: 'row',
-
   }
 });

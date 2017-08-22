@@ -1,17 +1,18 @@
 import {computed, observable} from 'mobx';
  
-class AlbumStore {
-    @observable album = [
-    ];
+class _AlbumStore {
+    @observable profiles = [];
+
+    @observable selectedProfile = {};
 
     @observable cameraFileSrc = "https://facebook.github.io/react/img/logo_og.png";
  
-    @computed get unfinishedTodoCount() {
+    /*@computed get unfinishedTodoCount() {
         return this.album.filter(album => !album.finished).length;
-    }
+    }*/
     
 }
  
-const Album = new AlbumStore();
+const AlbumStore = new _AlbumStore();
  
-export default Album;
+export default AlbumStore;

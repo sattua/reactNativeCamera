@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, AsyncStorage,TextInput } from 'react-native';
-import Album from './src/stores/AlbumStore';
+import AlbumStore from './src/stores/AlbumStore';
 import TabNav from './src/routers/Router';
 import {observer} from 'mobx-react';
 
@@ -11,11 +11,11 @@ export default class App extends React.Component {
     super(props);
     this.state = {storaged: ''};
   }
-
+ 
   render() {
     return (
       <View style={styles.container}>
-        <TabNav screenProps= {Album} />
+        <TabNav screenProps= {AlbumStore} />
       </View>
     );
   }
