@@ -1,12 +1,12 @@
 dependencies: \
-  /Users/anamarimorales/react-native/camera/ios/CameraApp/AppDelegate.m \
-  /Users/anamarimorales/react-native/camera/ios/CameraApp/AppDelegate.h \
-  /Users/anamarimorales/react-native/camera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBundleURLProvider.h \
-  /Users/anamarimorales/react-native/camera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
-  /Users/anamarimorales/react-native/camera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
-  /Users/anamarimorales/react-native/camera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
-  /Users/anamarimorales/react-native/camera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
-  /Users/anamarimorales/react-native/camera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
-  /Users/anamarimorales/react-native/camera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
-  /Users/anamarimorales/react-native/camera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
-  /Users/anamarimorales/react-native/camera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h
+  /Users/juan/devProjects/reactNativeCamera/ios/CameraApp/AppDelegate.m \
+  /Users/juan/devProjects/reactNativeCamera/ios/CameraApp/AppDelegate.h \
+  /Users/juan/devProjects/reactNativeCamera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBundleURLProvider.h \
+  /Users/juan/devProjects/reactNativeCamera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/juan/devProjects/reactNativeCamera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/juan/devProjects/reactNativeCamera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/juan/devProjects/reactNativeCamera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/juan/devProjects/reactNativeCamera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/juan/devProjects/reactNativeCamera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/juan/devProjects/reactNativeCamera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/juan/devProjects/reactNativeCamera/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h

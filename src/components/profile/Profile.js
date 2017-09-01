@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, TextInput, StyleSheet, Alert, AsyncStorage } from 'react-native';
+import { View, Text, Image, TextInput, StyleSheet, Alert, AsyncStorage, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import { Card, ListItem, Button } from 'react-native-elements';
 import MyCamera from '../camera/MyCamera';
 import {observer} from 'mobx-react';
@@ -86,6 +86,8 @@ export default class Profile extends React.Component{
             content = (                
                     <Card title='Photo info!' image = { { uri: this.state.avatar_url || screenProps.cameraFileSrc } } >
                     <TextInput
+                        onSubmitEditing={Keyboard.dismiss}
+                        returnKeyType ="done"
                         placeholder="Name"
                         placeholderTextColor="black"
                         style={styles.input}
@@ -93,6 +95,8 @@ export default class Profile extends React.Component{
                         value={this.state.name}
                     />
                     <TextInput
+                        onSubmitEditing={Keyboard.dismiss}
+                        returnKeyType ="done"
                         placeholder="Description"
                         placeholderTextColor="black"
                         style={styles.input}
@@ -103,6 +107,7 @@ export default class Profile extends React.Component{
         );}
 
         return (
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.profileContainer}>
                 { content }
                  <Button
@@ -118,6 +123,7 @@ export default class Profile extends React.Component{
                         onPress={this.createProfile.bind(this)}
                         title='generate' />
             </View>
+        </TouchableWithoutFeedback>
         )
     }
     

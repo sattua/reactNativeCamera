@@ -39,7 +39,13 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string>fghfghfgh</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>test</string>
+	<key>NSCameraUsageDescription</key>
+	<string>dfgdf</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>dfgdfg</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>

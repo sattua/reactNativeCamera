@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/anamarimorales/react-native/camera/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
-  /Users/anamarimorales/react-native/camera/node_modules/react-native/ReactCommon/jschelpers/Unicode.h
+  /Users/juan/devProjects/reactNativeCamera/node_modules/react-native/ReactCommon/jschelpers/Unicode.cpp \
+  /Users/juan/devProjects/reactNativeCamera/node_modules/react-native/ReactCommon/jschelpers/Unicode.h

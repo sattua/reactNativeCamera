@@ -27,5 +27,13 @@ export default TabNav = TabNavigator({
     }
 },{
   initialRouteName: 'MyList',
+  tabBarPosition: 'top',
+  animationEnabled: true,
+  tabBarOptions: {
+    activeTintColor: '#e91e63',
+    style: {
+        backgroundColor: '#d7cceb',
+      },
+  },
 });
 

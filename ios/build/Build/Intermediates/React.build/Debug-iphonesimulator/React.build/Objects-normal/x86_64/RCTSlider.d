@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/anamarimorales/react-native/camera/node_modules/react-native/React/Views/RCTSlider.m \
-  /Users/anamarimorales/react-native/camera/node_modules/react-native/React/Views/RCTSlider.h \
-  /Users/anamarimorales/react-native/camera/node_modules/react-native/React/Views/RCTComponent.h
+  /Users/juan/devProjects/reactNativeCamera/node_modules/react-native/React/Views/RCTSlider.m \
+  /Users/juan/devProjects/reactNativeCamera/node_modules/react-native/React/Views/RCTSlider.h \
+  /Users/juan/devProjects/reactNativeCamera/node_modules/react-native/React/Views/RCTComponent.h

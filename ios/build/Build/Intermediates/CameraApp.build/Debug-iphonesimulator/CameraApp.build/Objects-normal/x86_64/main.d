@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/anamarimorales/react-native/camera/ios/CameraApp/main.m \
-  /Users/anamarimorales/react-native/camera/ios/CameraApp/AppDelegate.h
+  /Users/juan/devProjects/reactNativeCamera/ios/CameraApp/main.m \
+  /Users/juan/devProjects/reactNativeCamera/ios/CameraApp/AppDelegate.h
