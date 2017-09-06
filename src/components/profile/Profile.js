@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, TextInput, StyleSheet, Alert, AsyncStorage, Keyboard, TouchableWithoutFeedback } from 'react-native';
-import { Card, ListItem, Button } from 'react-native-elements';
+import { Card, ListItem, Button, FormInput, FormLabel } from 'react-native-elements';
 import MyCamera from '../camera/MyCamera';
 import {observer} from 'mobx-react';
 
@@ -84,44 +84,46 @@ export default class Profile extends React.Component{
         }
         else{
             content = (                
-                    <Card title='Photo info!' image = { { uri: this.state.avatar_url || screenProps.cameraFileSrc } } >
-                    <TextInput
+                <Card title='Photo info!' image = { { uri: this.state.avatar_url || screenProps.cameraFileSrc } } >
+                    <FormLabel>Name</FormLabel>
+                    <FormInput
                         onSubmitEditing={Keyboard.dismiss}
                         returnKeyType ="done"
                         placeholder="Name"
-                        placeholderTextColor="black"
-                        style={styles.input}
                         onChangeText={(name) => this.setState({name})}
                         value={this.state.name}
                     />
-                    <TextInput
+                    <FormLabel>Description</FormLabel>
+                    <FormInput
                         onSubmitEditing={Keyboard.dismiss}
                         returnKeyType ="done"
                         placeholder="Description"
-                        placeholderTextColor="black"
-                        style={styles.input}
                         onChangeText={(description) => this.setState({description})}
                         value={this.state.description}
                     />
-                    </Card>
+                </Card>
         );}
 
         return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View style={styles.profileContainer}>
                 { content }
-                 <Button
-                        icon={{name: 'photo'}}
+                <View style={{marginTop:20}}>
+                    <Button
+                        icon={{name: 'camera-enhance'}}
                         backgroundColor='#03A9F4'
                         buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
                         onPress={this.getCamera.bind(this)}
-                        title='toggle camara' />
-                 <Button
-                        icon={{name: 'photo'}}
-                        backgroundColor='#03A9F4'
+                        title='Toggle camara' />
+                </View>
+                <View style={{marginTop:20}}>
+                    <Button
+                        icon={{name: 'done'}}
+                        backgroundColor='#76a977'
                         buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
                         onPress={this.createProfile.bind(this)}
-                        title='generate' />
+                        title='Create' />
+                </View>
             </View>
         </TouchableWithoutFeedback>
         )
