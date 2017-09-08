@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, TextInput, StyleSheet, Alert, AsyncStorage, Keyboard, TouchableWithoutFeedback } from 'react-native';
+import { ScrollView, View, Text, Image, TextInput, StyleSheet, Alert, AsyncStorage, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import { Card, ListItem, Button, FormInput, FormLabel } from 'react-native-elements';
 import MyCamera from '../camera/MyCamera';
 import {observer} from 'mobx-react';
@@ -31,21 +31,24 @@ export default class Profile extends React.Component{
     }
 
     doCreate(){
-        debugger;
-        this.props.screenProps.profiles.push({
+        const { navigation, screenProps } = this.props;
+
+        screenProps.profiles.push({
             name: this.state.name,
             avatar_url: this.props.screenProps.cameraFileSrc,
             description: this.state.description
         });
 
-        AsyncStorage.setItem('myCamAppData', JSON.stringify(this.props.screenProps.profiles));
+        AsyncStorage.setItem('myCamAppData', JSON.stringify(screenProps.profiles));
 
-        this.props.screenProps.cameraFileSrc = "https://facebook.github.io/react/img/logo_og.png";
+        screenProps.cameraFileSrc = "https://facebook.github.io/react/img/logo_og.png";
 
         this.setState({
             name: "",
             description: "",
         });
+        
+        navigation.navigate('MyList');
     }
         
     createProfile(){
@@ -75,12 +78,15 @@ export default class Profile extends React.Component{
     }
 
     render(){
-        const { navigate } = this.props.navigation;
         const {screenProps} = this.props;
         let content = null;
 
         if (this.state.camaraOn){
-            content = <MyCamera myStore={screenProps} toggleFunction= {this.getCamera.bind(this)} />;
+            content = <Card title='Take a photo'  >
+                    <View style={{height:300}}>
+                        <MyCamera myStore={screenProps} toggleFunction= {this.getCamera.bind(this)} />
+                    </View>
+                </Card>
         }
         else{
             content = (                
@@ -104,28 +110,32 @@ export default class Profile extends React.Component{
                 </Card>
         );}
 
-        return (
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-            <View style={styles.profileContainer}>
-                { content }
-                <View style={{marginTop:20}}>
-                    <Button
-                        icon={{name: 'camera-enhance'}}
-                        backgroundColor='#03A9F4'
-                        buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                        onPress={this.getCamera.bind(this)}
-                        title='Toggle camara' />
+        return (<ScrollView showsVerticalScrollIndicator={false} >
+            <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+                <View style={styles.profileContainer}>
+                    { content }
+                    <View style={{marginTop:20}}>
+                        <Button
+                            icon={{name: 'camera-enhance'}}
+                            backgroundColor='#03A9F4'
+                            buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                            onPress={this.getCamera.bind(this)}
+                            title='Toggle camara' />
+                    </View>
+                    { !this.state.camaraOn &&
+                        <View style={{marginTop:20}}>
+                            <Button
+                                icon={{name: 'done'}}
+                                backgroundColor='#76a977'
+                                buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                                onPress={this.createProfile.bind(this)}
+                                title='Create' />
+                        </View>
+                    }
+                    
                 </View>
-                <View style={{marginTop:20}}>
-                    <Button
-                        icon={{name: 'done'}}
-                        backgroundColor='#76a977'
-                        buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                        onPress={this.createProfile.bind(this)}
-                        title='Create' />
-                </View>
-            </View>
-        </TouchableWithoutFeedback>
+            </TouchableWithoutFeedback>
+        </ScrollView>
         )
     }
     

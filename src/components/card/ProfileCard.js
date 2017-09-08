@@ -1,29 +1,58 @@
 import React from 'react';
-import { View, Text, Image, TextInput, StyleSheet, Alert, AsyncStorage } from 'react-native';
-import { Card, ListItem, Button } from 'react-native-elements';
-import MyCamera from '../camera/MyCamera';
+import { View, Text, StyleSheet,Alert, AsyncStorage } from 'react-native';
+import { Card, Button } from 'react-native-elements';
 import {observer} from 'mobx-react';
 
 @observer
 export default class ProfileCard extends React.Component{
     constructor(props){
         super(props);
-        const {screenProps} = this.props;       
+        const {screenProps} = this.props;
+
         this.state = {
             name: screenProps.selectedProfile.name,
             description: screenProps.selectedProfile.description,
-            avatar_url: screenProps.selectedProfile.avatar_url
-            
+            avatar_url: screenProps.selectedProfile.avatar_url,
+            index: this.props.navigation.state.params.index
         }
     }
 
+    doRemove(){
+        const {index} = this.state;
+        const {screenProps, navigation} = this.props;
+
+        const temp = screenProps.profiles.filter((profile, i)=>{
+            return i !== index;
+        });
+        screenProps.profiles = temp;
+        AsyncStorage.setItem('myCamAppData', JSON.stringify(screenProps.profiles));
+        navigation.navigate('MyList');
+    }
+
+    removeRecord(){
+        Alert.alert(
+            'Remove',
+            'Are you sure you want to remove this profile?',
+            [
+              { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
+              { text: 'OK', onPress: () => this.doRemove() },
+            ]
+          );
+    }
+
     render(){
-        const {screenProps} = this.props;
+        
         return (
             <View style={styles.profileContainer}>
                  <Card title='Photo info!' image = { {uri:this.state.avatar_url} } >
-                    <Text>{this.state.name}</Text>
+                    <Text style={{fontWeight: 'bold'}}>{this.state.name}</Text>
                     <Text>{this.state.description}</Text>
+                    <Button
+                    icon={{name: 'delete'}}
+                    backgroundColor='#ef3434'
+                    buttonStyle={{marginLeft: 0, marginRight: 0, marginTop: 15, marginBottom: 15}}
+                    onPress={this.removeRecord.bind(this)}
+                    title='Remove Record' />
                  </Card>
             </View>
         )

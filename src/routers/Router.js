@@ -2,6 +2,7 @@ import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import MyList from '../components/list/List';
 import Profile from '../components/profile/Profile';
+import ImportProfiles from '../components/profile/ImportProfiles';
 import MyCamera from '../components/camera/MyCamera';
 import ProfileCard from '../components/card/ProfileCard';
 
@@ -24,6 +25,12 @@ export default TabNav = TabNavigator({
         navigationOptions: {
             tabBarLabel: 'Profile',
         },
+    },
+    ImportProfiles: {
+        screen: ImportProfiles,
+        navigationOptions: {
+            tabBarLabel: 'Import',
+        },
     }
 },{
   initialRouteName: 'MyList',
@@ -32,7 +39,7 @@ export default TabNav = TabNavigator({
   tabBarOptions: {
     activeTintColor: '#e91e63',
     style: {
-        backgroundColor: '#d7cceb',
+        backgroundColor: '#438eff',
       },
   },
 });

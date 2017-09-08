@@ -8,10 +8,9 @@ import ProfileCard from '../card/ProfileCard'
 @observer
 export default class MyList extends React.Component{
 
-showProfile(profile){
+showProfile(profile, index){
   this.props.screenProps.selectedProfile = profile;
-  this.props.navigation.navigate( "ProfileCard", { 'store': this.props.screenProps } );
-  
+  this.props.navigation.navigate( "ProfileCard", { 'store': this.props.screenProps, 'index': index } );
 }
 
 render() {
@@ -27,7 +26,7 @@ render() {
                     avatar={{uri:profile.avatar_url}}
                     key={i}
                     title={profile.name}
-                    onPress={ this.showProfile.bind(this, profile) }
+                    onPress={ this.showProfile.bind(this, profile, i) }
                 />
             )) : undefined
         }
