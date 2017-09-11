@@ -42,7 +42,7 @@ export default class Profile extends React.Component{
             name: "",
             description: "",
         });
-        navigation.navigate('MyList');
+        navigation.goBack();
     }
         
     createProfile(){

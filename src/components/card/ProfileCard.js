@@ -21,7 +21,7 @@ export default class ProfileCard extends React.Component{
         const {index} = this.state;
         const {screenProps, navigation} = this.props;
         screenProps.removeProfile(index); 
-        navigation.navigate('MyList');
+        navigation.goBack();
     }
 
     removeRecord(){
