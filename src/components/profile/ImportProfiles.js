@@ -1,15 +1,17 @@
 import React from 'react';
-import { ScrollView, View, Text, Alert} from 'react-native';
+import { ScrollView, View, Text, Alert, Picker} from 'react-native';
 import { Card, List, ListItem, Button, FormInput, FormLabel } from 'react-native-elements';
 import {observer} from 'mobx-react';
 
 @observer
 export default class ImportProfiles extends React.Component{
     constructor(props){
-        super(props);   
+        super(props);
         this.state = {
             data: undefined,
-            url: 'https://jsonplaceholder.typicode.com/users'
+            //sourceUrl: 'https://jsonplaceholder.typicode.com/users'
+            sourceUrl: 'https://reqres.in/api/users',
+            isLoading: false
         }
     }
 
@@ -22,15 +24,26 @@ export default class ImportProfiles extends React.Component{
         this.fetchData()
     }
 
-    async fetchData() {
-        fetch(this.state.url)
+    async fetchData(sourceUrl = this.state.sourceUrl) {
+        this.setState({
+            isLoading: true,
+            data: undefined,
+        });
+        fetch(sourceUrl)
             .then((response) => response.json())
             .then((responseJson) => {
-                this.setState({data: responseJson})
-                return responseJson.movies;
+                this.setState({
+                    data: responseJson.data || responseJson,
+                    sourceUrl: sourceUrl,
+                    isLoading: false
+                });
+                return responseJson;
             })
             .catch((error) => {
                //error
+               this.setState({
+                    isLoading: false 
+                });
             });
     }
 
@@ -72,8 +85,8 @@ export default class ImportProfiles extends React.Component{
                 entries.push(<ListItem
                     onPress={ ()=> this.selectedEntry(entry) }
                     key={i}
-                    subtitle={entry.username}
-                    title={ entry.name }
+                    subtitle={ entry.username || entry.first_name}
+                    title={ entry.name || entry.last_name }
                     rightTitle= { entry.email }
                     containerStyle={{ backgroundColor: entry.isSelected ? "#ece9e9" : "#ffffff" }}
                 />);
@@ -91,9 +104,9 @@ export default class ImportProfiles extends React.Component{
         if(selected.length){
             selected.map((entry, i)=>{
                 tempList.push({
-                    name: entry.name,
-                    avatar_url: "https://facebook.github.io/react/img/logo_og.png",
-                    description: entry.email
+                    name: entry.name || entry.first_name,
+                    avatar_url: entry.avatar || "https://facebook.github.io/react/img/logo_og.png",
+                    description: entry.email || "none"
                 });
             });
             screenProps.addProfiles(tempList);
@@ -101,11 +114,23 @@ export default class ImportProfiles extends React.Component{
         }
     }
 
+    loadSourceUrl(itemValue){
+        this.fetchData(itemValue);
+    }
+
     render(){
         const selectedItemCounter = this.getSelectedEntries();
         return (
         <ScrollView >
-            <Card title={"Import Data"}>
+            <Card title={"Data Sources"}>
+                <Picker selectedValue={this.state.sourceUrl} onValueChange={(itemValue) =>this.loadSourceUrl(itemValue) } >
+                    <Picker.Item label="typicode.com" value="https://jsonplaceholder.typicode.com/users" />
+                    <Picker.Item label="reqres.in" value="https://reqres.in/api/users" />
+                </Picker>
+                <Text>{ this.state.isLoading ? "Loading..." : "" }</Text>
+            </Card>
+            
+            <Card title={"Data"}>
                 <Text style={{fontWeight:'bold'}} >Available Records</Text>
                 <Text>Selected { selectedItemCounter.length } </Text>
                 { selectedItemCounter.length > 0 && 
@@ -116,10 +141,11 @@ export default class ImportProfiles extends React.Component{
                         buttonStyle={{marginTop: 10}}
                         title={ 'Import Selected' }  /> 
                 }
-                { this.state.data &&
-                   <List>{ this.renderAvailableRecords() }</List>
+                {
+                    <List>{ this.renderAvailableRecords() }</List>
                 }
             </Card>
+            
         </ScrollView>
         )
     }
