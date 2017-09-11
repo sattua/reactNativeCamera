@@ -21,8 +21,9 @@ export default class Profile extends React.Component{
     };
 
     componentDidMount(){
+        const { screenProps } = this.props;
         let global = this; //so we don't lose scope from component
-        AsyncStorage.getItem("myCamAppData")
+        AsyncStorage.getItem(screenProps.storageURI)
         .then((value) => {
             if(value){
                 global.props.screenProps.profiles = JSON.parse(value);
@@ -32,22 +33,15 @@ export default class Profile extends React.Component{
 
     doCreate(){
         const { navigation, screenProps } = this.props;
-
-        screenProps.profiles.push({
+        screenProps.addProfile({
             name: this.state.name,
             avatar_url: this.props.screenProps.cameraFileSrc,
             description: this.state.description
         });
-
-        AsyncStorage.setItem('myCamAppData', JSON.stringify(screenProps.profiles));
-
-        screenProps.cameraFileSrc = "https://facebook.github.io/react/img/logo_og.png";
-
         this.setState({
             name: "",
             description: "",
         });
-        
         navigation.navigate('MyList');
     }
         

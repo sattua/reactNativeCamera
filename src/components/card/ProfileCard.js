@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet,Alert, AsyncStorage } from 'react-native';
+import { View, Text, StyleSheet,Alert } from 'react-native';
 import { Card, Button } from 'react-native-elements';
 import {observer} from 'mobx-react';
 
@@ -20,12 +20,7 @@ export default class ProfileCard extends React.Component{
     doRemove(){
         const {index} = this.state;
         const {screenProps, navigation} = this.props;
-
-        const temp = screenProps.profiles.filter((profile, i)=>{
-            return i !== index;
-        });
-        screenProps.profiles = temp;
-        AsyncStorage.setItem('myCamAppData', JSON.stringify(screenProps.profiles));
+        screenProps.removeProfile(index); 
         navigation.navigate('MyList');
     }
 
@@ -37,7 +32,7 @@ export default class ProfileCard extends React.Component{
               { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel' },
               { text: 'OK', onPress: () => this.doRemove() },
             ]
-          );
+        );
     }
 
     render(){
@@ -48,11 +43,11 @@ export default class ProfileCard extends React.Component{
                     <Text style={{fontWeight: 'bold'}}>{this.state.name}</Text>
                     <Text>{this.state.description}</Text>
                     <Button
-                    icon={{name: 'delete'}}
-                    backgroundColor='#ef3434'
-                    buttonStyle={{marginLeft: 0, marginRight: 0, marginTop: 15, marginBottom: 15}}
-                    onPress={this.removeRecord.bind(this)}
-                    title='Remove Record' />
+                        icon={{name: 'delete'}}
+                        backgroundColor='#ef3434'
+                        buttonStyle={{marginLeft: 0, marginRight: 0, marginTop: 15, marginBottom: 15}}
+                        onPress={this.removeRecord.bind(this)}
+                        title='Remove Record' />
                  </Card>
             </View>
         )

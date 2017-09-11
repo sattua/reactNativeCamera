@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View, Text, AsyncStorage, Alert} from 'react-native';
+import { ScrollView, View, Text, Alert} from 'react-native';
 import { Card, List, ListItem, Button, FormInput, FormLabel } from 'react-native-elements';
 import {observer} from 'mobx-react';
 
@@ -86,16 +86,17 @@ export default class ImportProfiles extends React.Component{
     importSelected(){
         const { screenProps } = this.props; 
         const selected = this.getSelectedEntries();
+        let tempList = [];
 
         if(selected.length){
             selected.map((entry, i)=>{
-                screenProps.profiles.push({
+                tempList.push({
                     name: entry.name,
                     avatar_url: "https://facebook.github.io/react/img/logo_og.png",
                     description: entry.email
                 });
-                AsyncStorage.setItem('myCamAppData', JSON.stringify(screenProps.profiles));
             });
+            screenProps.addProfiles(tempList);
             this.unselectAllEntries();
         }
     }
