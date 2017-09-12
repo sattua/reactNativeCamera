@@ -16,11 +16,14 @@ export default class ProfileCard extends React.Component{
             index: this.props.navigation.state.params.index
         }
     }
+    static navigationOptions = {
+        title: 'Back to list',
+     };
 
     doRemove(){
         const {index} = this.state;
         const {screenProps, navigation} = this.props;
-        screenProps.removeProfile(index); 
+        screenProps.removeProfile(index);
         navigation.goBack();
     }
 

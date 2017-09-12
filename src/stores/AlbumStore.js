@@ -36,6 +36,15 @@ class _AlbumStore {
         this.profiles = temp;
         AsyncStorage.setItem(this.storageURI, JSON.stringify(this.profiles));
     }
+
+    @action removeProfiles(indexes) {
+        const temp = this.profiles.filter((profile, i)=>{
+            return indexes.indexOf(i) < 0;
+        });
+        
+        this.profiles = temp;
+        AsyncStorage.setItem(this.storageURI, JSON.stringify(this.profiles));
+    }
     
 }
  

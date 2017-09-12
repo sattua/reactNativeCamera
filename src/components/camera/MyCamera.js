@@ -1,11 +1,7 @@
 'use strict';
 import React, { Component } from 'react';
 import {
-  AppRegistry,
-  Dimensions,
   StyleSheet,
-  Text,
-  TouchableHighlight,
   View
 } from 'react-native';
 import Camera from 'react-native-camera';
@@ -28,7 +24,12 @@ export default class MyCamera extends React.Component {
           }}
           style={styles.preview}
           aspect={Camera.constants.Aspect.fill}>
-          <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[ Take Photo ] </Text>
+          <Button style={styles.capture}
+            title='Press'
+            icon={{name:'camera-enhance'}}
+            backgroundColor={ '#ff4646'}
+            borderRadius={10}
+            onPress={this.takePicture.bind(this)} />
         </Camera>
      
     );
@@ -58,10 +59,8 @@ const styles = StyleSheet.create({
   },
   capture: {
     flex: 0,
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    color: '#000',
     padding: 10,
-    margin: 40
+    margin: 35,
+    marginBottom: 5,
   }
 });

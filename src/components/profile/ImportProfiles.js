@@ -2,6 +2,7 @@ import React from 'react';
 import { ScrollView, View, Text, Alert, Picker} from 'react-native';
 import { Card, List, ListItem, Button, FormInput, FormLabel } from 'react-native-elements';
 import {observer} from 'mobx-react';
+import SlideComp from '../common/SlideComp';
 
 @observer
 export default class ImportProfiles extends React.Component{
@@ -78,7 +79,7 @@ export default class ImportProfiles extends React.Component{
         return [];
     }
 
-    renderAvailableRecords(){
+    getAvailableRecords(){
         if(this.state.data){
             let entries = [];
             this.state.data.map((entry, i) =>{
@@ -118,6 +119,15 @@ export default class ImportProfiles extends React.Component{
         this.fetchData(itemValue);
     }
 
+    renderResultList(){
+        if(this.state.data){
+        return <SlideComp isVisible={true} >
+            <List>{ this.getAvailableRecords() }</List>
+        </SlideComp>
+        }
+        return;
+    }
+
     render(){
         const selectedItemCounter = this.getSelectedEntries();
         return (
@@ -142,7 +152,7 @@ export default class ImportProfiles extends React.Component{
                         title={ 'Import Selected' }  /> 
                 }
                 {
-                    <List>{ this.renderAvailableRecords() }</List>
+                    this.renderResultList()
                 }
             </Card>
             

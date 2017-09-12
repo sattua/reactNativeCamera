@@ -83,7 +83,7 @@ export default class Profile extends React.Component{
                 </Card>
         }
         else{
-            content = (                
+            content = (            
                 <Card title='Photo info!' image = { { uri: this.state.avatar_url || screenProps.cameraFileSrc } } >
                     <FormLabel>Name</FormLabel>
                     <FormInput
@@ -110,11 +110,11 @@ export default class Profile extends React.Component{
                     { content }
                     <View style={{marginTop:20}}>
                         <Button
-                            icon={{name: 'camera-enhance'}}
+                            icon={{name: 'add-a-photo'}}
                             backgroundColor='#03A9F4'
                             buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
                             onPress={this.getCamera.bind(this)}
-                            title='Toggle camara' />
+                            title='Toggle camera' />
                     </View>
                     { !this.state.camaraOn &&
                         <View style={{marginTop:20}}>
