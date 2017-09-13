@@ -17,7 +17,7 @@ export default class MyList extends React.Component{
   }
 
   showProfile(profile, index){
-    this.props.screenProps.selectedProfile = profile;
+    this.props.screenProps.setSelectedProfile(profile);
     this.props.navigation.navigate( "ProfileCard", { 'store': this.props.screenProps, 'index': index } );
   }
 
@@ -55,8 +55,9 @@ export default class MyList extends React.Component{
 
   getSelectedMenu(){
     if(this.state.selectedProfiles.length){
-      return <FadeInComp>
-          <View style={{backgroundColor:"#ffffff",padding:20}}>
+      return(
+      <FadeInComp duration={500} action={this.UnselectElements.bind(this)}>
+          <View>
             <Text style={{margin:10}} >Selected profiles: {this.state.selectedProfiles.length}</Text>
             <View style={{marginBottom:10}}>
               <Button
@@ -66,41 +67,37 @@ export default class MyList extends React.Component{
                 backgroundColor={ '#ff4646'}
                 onPress={this.removeSelected.bind(this)} />
             </View>
-            <Button
-              title='Unselected'
-              icon={{name:'autorenew'}}
-              backgroundColor={ '#438eff'}
-              onPress={this.UnselectElements.bind(this)} />
         </View>
-      </FadeInComp>
+      </FadeInComp>);
     }
     return;
   }
 
   render() {
-      const { screenProps } = this.props;
-      const {selectedProfiles} = this.state;
-      return (
-        <ScrollView>
-          {this.getSelectedMenu()}
-          <List containerStyle={{marginBottom: 20}}>
-          { screenProps.profiles.length ?
-              screenProps.profiles.map((profile, i) => (
-                  <ListItem
-                      roundAvatar
-                      avatar={{uri:profile.avatar_url}}
-                      key={i}
-                      title={profile.name}
-                      onPress={ this.showProfile.bind(this, profile, i) }
-                      onLongPress={ this.selectProfile.bind(this, i) }
-                      containerStyle={{ backgroundColor: selectedProfiles.indexOf(i) >= 0 ? "#f1f1f1" : "#ffffff" }}
-                  />
-              )) : undefined
-          }
-          </List>
-        </ScrollView>
-      );
-    }
+    debugger;
+    const { screenProps } = this.props;
+    const {selectedProfiles} = this.state;
+    return (
+      <ScrollView>
+        {this.getSelectedMenu()}
+        <List containerStyle={{marginBottom: 20}}>
+        { screenProps.profiles.length ?
+            screenProps.profiles.map((profile, i) => (
+                <ListItem
+                    roundAvatar
+                    avatar={{uri:profile.avatar_url}}
+                    key={i}
+                    title={profile.name}
+                    onPress={ this.showProfile.bind(this, profile, i) }
+                    onLongPress={ this.selectProfile.bind(this, i) }
+                    containerStyle={{ backgroundColor: selectedProfiles.indexOf(i) >= 0 ? "#f1f1f1" : "#ffffff" }}
+                />
+            )) : undefined
+        }
+        </List>
+      </ScrollView>
+    );
+  }
 }
 
 const styles = StyleSheet.create({

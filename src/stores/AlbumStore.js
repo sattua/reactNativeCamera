@@ -11,6 +11,10 @@ class _AlbumStore {
         return this.storageName;
     }
 
+    @action setSelectedProfile(profile) {
+        this.selectedProfile = profile;
+    }
+
     @action addProfile(profile) {
         this.profiles.push(profile);
         AsyncStorage.setItem(this.storageURI, JSON.stringify(this.profiles));
