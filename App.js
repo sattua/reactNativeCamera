@@ -3,8 +3,9 @@ import React from 'react';
 import { StyleSheet, Text, View, AsyncStorage,TextInput } from 'react-native';
 import AlbumStore from './src/stores/AlbumStore';
 import TabNav from './src/routers/Router';
-import {observer} from 'mobx-react';
+import { Provider, inject, observer } from 'mobx-react/native';
 
+//TODo remove it
 @observer
 export default class App extends React.Component {
 
@@ -15,9 +16,11 @@ export default class App extends React.Component {
  
   render() {
     return (
-      <View style={styles.container}>
-        <TabNav screenProps= {AlbumStore} />
-      </View>
+      <Provider {...AlbumStore}>
+        <View style={styles.container}>
+          <TabNav />
+        </View>
+      </Provider>
     );
   }
 }

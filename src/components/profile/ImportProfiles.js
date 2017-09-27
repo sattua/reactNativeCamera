@@ -1,9 +1,10 @@
 import React from 'react';
 import { ScrollView, View, Text, Alert, Picker} from 'react-native';
 import { Card, List, ListItem, Button, FormInput, FormLabel } from 'react-native-elements';
-import {observer} from 'mobx-react';
 import SlideComp from '../common/SlideComp';
+import { inject, observer } from 'mobx-react/native';
 
+@inject('AlbumStore')
 @observer
 export default class ImportProfiles extends React.Component{
     constructor(props){
@@ -98,7 +99,7 @@ export default class ImportProfiles extends React.Component{
     }
 
     importSelected(){
-        const { screenProps } = this.props; 
+        const { AlbumStore } = this.props; 
         const selected = this.getSelectedEntries();
         let tempList = [];
 
@@ -110,7 +111,7 @@ export default class ImportProfiles extends React.Component{
                     description: entry.email || "none"
                 });
             });
-            screenProps.addProfiles(tempList);
+            AlbumStore.addProfiles(tempList);
             this.unselectAllEntries();
         }
     }

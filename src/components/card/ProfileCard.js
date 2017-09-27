@@ -1,18 +1,19 @@
 import React from 'react';
 import { View, Text, StyleSheet,Alert } from 'react-native';
 import { Card, Button } from 'react-native-elements';
-import {observer} from 'mobx-react';
+import { inject, observer } from 'mobx-react/native';
 
+@inject('AlbumStore')
 @observer
 export default class ProfileCard extends React.Component{
     constructor(props){
         super(props);
-        const {screenProps} = this.props;
+        const {AlbumStore} = this.props;
 
         this.state = {
-            name: screenProps.selectedProfile.name,
-            description: screenProps.selectedProfile.description,
-            avatar_url: screenProps.selectedProfile.avatar_url,
+            name: AlbumStore.selectedProfile.name,
+            description: AlbumStore.selectedProfile.description,
+            avatar_url: AlbumStore.selectedProfile.avatar_url,
             index: this.props.navigation.state.params.index
         }
     }
@@ -22,8 +23,8 @@ export default class ProfileCard extends React.Component{
 
     doRemove(){
         const {index} = this.state;
-        const {screenProps, navigation} = this.props;
-        screenProps.removeProfile(index);
+        const {AlbumStore, navigation} = this.props;
+        AlbumStore.removeProfile(index);
         navigation.goBack();
     }
 

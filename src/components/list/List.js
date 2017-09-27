@@ -1,11 +1,12 @@
 import React from 'react';
 import { Text, StyleSheet, Image, View, ScrollView, Alert, Animated } from 'react-native';
 import { List, ListItem, Button } from 'react-native-elements'
-import {observer} from 'mobx-react';
 import { StackNavigator } from 'react-navigation';
 import ProfileCard from '../card/ProfileCard';
 import FadeInComp from '../common/FadeInComp';
+import { inject, observer } from 'mobx-react/native';
 
+@inject('AlbumStore')
 @observer
 export default class MyList extends React.Component{
 
@@ -17,8 +18,8 @@ export default class MyList extends React.Component{
   }
 
   showProfile(profile, index){
-    this.props.screenProps.setSelectedProfile(profile);
-    this.props.navigation.navigate( "ProfileCard", { 'store': this.props.screenProps, 'index': index } );
+    this.props.AlbumStore.setSelectedProfile(profile);
+    this.props.navigation.navigate( "ProfileCard", { 'index': index } );
   }
 
   selectProfile(index){
@@ -30,9 +31,9 @@ export default class MyList extends React.Component{
   }
 
   doRemoveSelected(){
-    const { screenProps } = this.props;
+    const { AlbumStore } = this.props;
 
-    screenProps.removeProfiles(this.state.selectedProfiles);
+    AlbumStore.removeProfiles(this.state.selectedProfiles);
     this.UnselectElements();
   }
 
@@ -75,14 +76,14 @@ export default class MyList extends React.Component{
 
   render() {
     debugger;
-    const { screenProps } = this.props;
+    const { AlbumStore } = this.props;
     const {selectedProfiles} = this.state;
     return (
       <ScrollView>
         {this.getSelectedMenu()}
         <List containerStyle={{marginBottom: 20}}>
-        { screenProps.profiles.length ?
-            screenProps.profiles.map((profile, i) => (
+        { AlbumStore.profiles.length ?
+          AlbumStore.profiles.map((profile, i) => (
                 <ListItem
                     roundAvatar
                     avatar={{uri:profile.avatar_url}}

@@ -6,8 +6,9 @@ import {
 } from 'react-native';
 import Camera from 'react-native-camera';
 import { Button } from 'react-native-elements';
-import {observer} from 'mobx-react';
+import { inject, observer } from 'mobx-react/native';
 
+@inject('AlbumStore')
 @observer
 export default class MyCamera extends React.Component {
 
@@ -39,7 +40,7 @@ export default class MyCamera extends React.Component {
     const options = {};
     this.camera.capture({metadata: options})
       .then((data) => {
-        this.props.myStore.cameraFileSrc = data.path;
+        this.props.AlbumStore.cameraFileSrc = data.path;
         this.props.toggleFunction();
         return console.log(data);
       })

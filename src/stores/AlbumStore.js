@@ -54,4 +54,4 @@ class _AlbumStore {
  
 const AlbumStore = new _AlbumStore();
  
-export default AlbumStore;
+export default {AlbumStore: AlbumStore};

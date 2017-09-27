@@ -2,8 +2,9 @@ import React from 'react';
 import { ScrollView, View, Text, Image, TextInput, StyleSheet, Alert, AsyncStorage, Keyboard, TouchableWithoutFeedback } from 'react-native';
 import { Card, ListItem, Button, FormInput, FormLabel } from 'react-native-elements';
 import MyCamera from '../camera/MyCamera';
-import {observer} from 'mobx-react';
+import { inject, observer } from 'mobx-react/native';
 
+@inject('AlbumStore')
 @observer
 export default class Profile extends React.Component{
     constructor(props){
@@ -21,21 +22,21 @@ export default class Profile extends React.Component{
     };
 
     componentDidMount(){
-        const { screenProps } = this.props;
+        const { AlbumStore } = this.props;
         let global = this; //so we don't lose scope from component
-        AsyncStorage.getItem(screenProps.storageURI)
+        AsyncStorage.getItem(AlbumStore.storageURI)
         .then((value) => {
             if(value){
-                global.props.screenProps.profiles = JSON.parse(value);
+                global.props.AlbumStore.profiles = JSON.parse(value);
             }
         }).done();
     }
 
     doCreate(){
-        const { navigation, screenProps } = this.props;
-        screenProps.addProfile({
+        const { navigation, AlbumStore } = this.props;
+        AlbumStore.addProfile({
             name: this.state.name,
-            avatar_url: this.props.screenProps.cameraFileSrc,
+            avatar_url: this.props.AlbumStore.cameraFileSrc,
             description: this.state.description
         });
         this.setState({
@@ -72,19 +73,19 @@ export default class Profile extends React.Component{
     }
 
     render(){
-        const {screenProps} = this.props;
+        const {AlbumStore} = this.props;
         let content = null;
 
         if (this.state.camaraOn){
             content = <Card title='Take a photo'  >
                     <View style={{height:300}}>
-                        <MyCamera myStore={screenProps} toggleFunction= {this.getCamera.bind(this)} />
+                        <MyCamera toggleFunction= {this.getCamera.bind(this)} />
                     </View>
                 </Card>
         }
         else{
             content = (            
-                <Card title='Photo info!' image = { { uri: this.state.avatar_url || screenProps.cameraFileSrc } } >
+                <Card title='Photo info!' image = { { uri: this.state.avatar_url || AlbumStore.cameraFileSrc } } >
                     <FormLabel>Name</FormLabel>
                     <FormInput
                         onSubmitEditing={Keyboard.dismiss}
