@@ -1,3 +1,4 @@
+// test
 import {computed, observable, action} from 'mobx';
 import { AsyncStorage } from 'react-native';
  
