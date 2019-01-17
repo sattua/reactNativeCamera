@@ -1,3 +1,4 @@
+//hola joha
 'use strict';
 import React from 'react';
 import { StyleSheet, Text, View, AsyncStorage,TextInput } from 'react-native';
